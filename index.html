@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="print.min.css" />
+    <title>QRcODE</title>
+  </head>
+
+  <body id="container">
+    <a href="#" id="print">GENERATE PDF!</a>
+    <div class="items"></div>
+
+    <script src="qrcode.min.js"></script>
+    <script type="text/javascript">
+
+      const arrayLinks = [
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+      ];
+
+      for (const QRCODE of arrayLinks) {
+        new QRCode(document.querySelector(".items"), `${QRCODE}`);
+      }
+    </script>
+  </body>
+</html>
